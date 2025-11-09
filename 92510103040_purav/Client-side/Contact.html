@@ -1,0 +1,408 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="couple.css">
+     <link rel="stylesheet" type="text/css" href="C:\Users\Ishita\Desktop\Sem-3\Project\dist\style.css">
+    <style>
+     
+ .signup-container {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .slider-section {
+      background-color: white;
+      height: 105vh;  
+      
+    }
+    .form-section {
+      padding: 120px;
+      background-color: white;
+      
+    }
+    .form-section .form-control {
+      border-radius: 3px;
+      border: none;
+      border: 1px solid #252424;
+      margin-bottom: 20px;
+      box-shadow: none;
+    }
+    .signup-btn {
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 10px;
+      width: 100%;
+      background: none;
+    }
+    .login-link {
+      font-size: 14px;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .nav-link{
+        color: #6A5F55;
+    }
+   
+
+    .navbar{
+        background-color:  #D9C8B2; /*#DEBFAD*/
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
+    .Logo{
+        width: 220px;
+        height: 75px;
+    }
+
+    .sub-navbar {
+      background-color: #F1E9DC;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 99px; /* height of main navbar */
+      z-index: 1019;
+      
+    }
+    .sub-navbar .nav-link {
+      font-weight: 500;
+      color: #6A5F55 !important;
+      padding: 2px;
+    }
+   
+    
+
+ 
+
+.nav-bar {
+        background-color: #F1E9DC; /* beige background */
+        border-bottom: 1px solid #d1c4b0; /* subtle border */
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        position: sticky;
+       top: 99px; /* height of main navbar */
+       z-index: 1019;
+    }
+
+    /* Navigation links */
+    .nav-bar a {
+        text-decoration: none;
+        color: #6A5F55;
+        margin: 0 10px;
+           font-weight: 500;
+          color: #6A5F55;
+          padding: 2px;
+    }
+
+     .footer {
+      border: 1px solid #ccc;
+      padding: 40px 20px;
+      font-size: 15px;
+      background-color: #F1E9DC;
+    }
+    .footer h6 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .footer a {
+      display: block;
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: color 0.3s;
+    }
+    .footer a:hover {
+      color: #555;
+    }
+    .footer .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      color: #000;
+    }
+    .footer .social-icons a:hover {
+      color: #555;
+    }
+
+     @media (max-width: 845px) {
+  
+.nav-bar {
+       display: none;
+    }
+
+    /* Navigation links */
+    .nav-bar a {
+       display: none;
+    }
+}
+
+#usr,#eml,#nm,#City,#Addr{
+  color: red;
+  margin-bottom: 1px;
+}
+
+
+
+ .Mobile button {
+      display: none;
+    }
+
+    /* Show only when screen width ≤ 845px */
+    @media (max-width: 845px) {
+      .Mobile button {
+        display: inline-block;
+      }
+    }
+
+    </style>
+</head>
+<body>
+ 
+    
+   <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+
+    <!-- Left Side -->
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-3 ">
+      <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+      <li class="nav-item mega-hover position-static">
+          <a class="nav-link" href="woman.html">Women </a>
+         
+              
+           
+        </li>
+
+      <li class="nav-item"><a class="nav-link" href="Couple.html">Couple</a></li>
+    </ul>
+
+    <a class="navbar-brand" href="#">
+   <img class="Logo" src="Stylesurfer-removebg-preview.png">
+
+   </a>
+
+   
+
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i></a></li>
+      
+    </ul>
+    
+    </div>
+  </div>
+  
+</nav>
+
+<div class="nav-bar  ">
+    <a href="#">Rings</a>
+    <a href="productpage.html">Earrings</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Diamond Jewellery</a>
+    <a href="#">All Jewellery</a>
+    <a href="#">Occasions & Gifting</a>
+    <a href="Contact.html">Contact</a>
+</div>
+
+
+<!-- Mobile Offcanvas Toggle -->
+<div class="lg:hidden flex justify-between items-center   Mobile">
+ 
+  <button class="btn " data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+    ☰
+  </button>
+
+</div>
+
+<!-- Offcanvas Menu for Mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header bg-pink-100">
+    
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body bg-pink-50">
+    <ul class="space-y-4">
+       <li><a href="#" class="block text-lg no-underline">Rings</a></li>
+      <li><a href="#" class="block text-lg no-underline">Earrings</a></li>
+      <li><a href="#" class="block text-lg no-underline">Men</a></li>
+      <li><a href="#" class="block text-lg no-underline">Women</a></li>
+      <li><a href="#" class="block text-lg no-underline">Diamond Jewellery</a></li>
+      <li><a href="#" class="block text-lg no-underline">All Jewellery</a></li>
+      <li><a href="#" class="block text-lg no-underline">Occasions & Gifting</a></li>
+    </ul>
+  </div>
+</div>
+    
+    <div class="container ">
+  <div class="col-md-12 form-section">
+      <p class="text-center mb-4 h3">Contact Us</p>
+
+      <form id="myform" method="POST" action="#"
+onsubmit="return validate()">
+        <input type="text" class="form-control" placeholder="Name"  name="username" id="user">
+        <span id="usr"></span>
+
+        <input type="email" class="form-control" placeholder="Email"  name="email" id="emails">
+        <span id="eml"></span>
+
+        <input type="tel" class="form-control" placeholder="Phone" name="num" id="num">
+        <span id="nm"></span>
+
+       <input type="text" class="form-control" placeholder="Address" name="addre" id="addres">
+        <span id="Addr"></span>
+
+        <input type="tel" class="form-control" placeholder="City" name="city" id="cit">
+        <span id="City"></span>
+
+      
+
+       
+
+        <button type="submit" class="signup-btn mt-3" value="submit" id="btn" name="submit">Submit </button>
+
+      </form>
+
+      <p class="text-center login-link">Already have an account? <a href="#">Login</a></p>
+    </div>
+    </div>
+
+
+
+    
+
+  <footer class="footer container-fluid d-none d-md-block">
+    <div class="row text-center text-md-start ms-5">
+
+      <!-- Categories -->
+      <div class="col-6 col-sm-3 mb-4">
+        <h6>Categories</h6>
+        <a href="#">Earrings</a>
+        <a href="#">Bangles</a>
+        <a href="#">Rings</a>
+        <a href="#">Pendants</a>
+        <a href="#">Necklace</a>
+      </div>
+
+      <!-- Info -->
+      <div class="col-6 col-sm-3 mb-4">
+        <h6>Info</h6>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Celebrity Look</a>
+      </div>
+
+      <!-- Customer Care -->
+      <div class="col-12 col-sm-3 mb-4">
+        <h6>For Customer Care</h6>
+        <p class="mb-1">customercare@glamourjewellery.com</p>
+        <p class="mb-0">+91 9106446236</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-12 col-sm-3 mb-4">
+        <h6>Follow Us</h6>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Mobile Accordion -->
+  <div class="accordion d-block d-md-none" id="footerAccordion">
+
+    <!-- Categories -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCat">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat">
+          Categories
+        </button>
+      </h2>
+      <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#" class="d-block">Earrings</a>
+          <a href="#" class="d-block">Bangles</a>
+          <a href="#" class="d-block">Rings</a>
+          <a href="#" class="d-block">Pendants</a>
+          <a href="#" class="d-block">Necklace</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingInfo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo">
+          Info
+        </button>
+      </h2>
+      <div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#" class="d-block">About Us</a>
+          <a href="#" class="d-block">Contact Us</a>
+          <a href="#" class="d-block">Celebrity Look</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Care -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCare">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCare">
+          For Customer Care
+        </button>
+      </h2>
+      <div id="collapseCare" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <p class="mb-1">customercare@glamourjewellery.com</p>
+          <p class="mb-0">+91 9106446236</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFollow">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFollow">
+          Follow Us
+        </button>
+      </h2>
+      <div id="collapseFollow" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#"><i class="bi bi-facebook me-2"></i></a>
+          <a href="#"><i class="bi bi-pinterest me-2"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="contact.js"></script>
+
+
+
+
+  
+</body>
+</html>

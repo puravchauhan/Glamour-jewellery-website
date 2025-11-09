@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+     <style>
+      body{
+        background-color: white;
+      }
+        .navbar{
+            height: 65px;
+            padding: 25px 5px 25px 5px;
+            margin-bottom: 27px;
+            
+        }
+    .accordion-button::after {
+  filter: brightness(0) invert(1); /* makes the arrow white */
+}
+
+
+      .profile-img img {
+      border-radius: 30px;
+      margin: 15px auto;
+    }
+        
+    /* Sidebar */
+    .sidebar {
+      background-color: #101010; 
+      min-height: 292vh;
+      color: #ecf0f1;
+      padding-top: 10px;
+      
+    }
+    .sidebar .accordion-button {
+      background-color: #1b1c1c;
+      color: #ced4d5;
+      border: none;
+      padding: 12px 16px;
+    }
+    .sidebar .accordion-button:not(.collapsed) {
+      background-color: #34495E;
+      color: #fff;
+      box-shadow: none;
+    }
+    .sidebar .accordion-body a {
+      display: block;
+     padding: 8px 5px;
+     color: #bdc3c7;
+     text-decoration: none;
+     border-radius: 2px;
+}
+  .sidebar .accordion-body a {
+  color: #f1f1f1; /* brighter text */
+}
+
+.sidebar .accordion-body a:hover {
+  background-color: #4f5049;
+  color: #fff;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-wrapper input {
+    padding-right: 40px; 
+  }
+
+  .search-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+  }
+input:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+    thead{
+        background-color: #101010;
+    }
+    
+
+
+.upload-area {
+    border: 2px dashed #dee2e6; 
+    border-radius: 0.25rem; 
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.upload-area:hover {
+    border-color: #444547;
+    background-color: #f8f9fa; 
+}
+
+.upload-area .upload-icon {
+    font-size: 3rem; 
+    color: #6c757d; 
+    margin-bottom: 0.5rem;
+}
+
+.upload-area p {
+    margin-bottom: 0.25rem;
+    color: #495057; 
+}
+
+.upload-area .form-text {
+    font-size: 0.875em;
+    color: #6c757d;
+}
+  .nav-item-bordered {
+    border: 1px solid #1d1e1e; /* A light gray border */
+    margin: 0 0.25rem; 
+}
+.nav-tabs .nav-link {
+    border-bottom: 1px solid #1d1e1e !important;
+}
+
+
+
+     </style>
+</head>
+<body>
+
+  
+
+ <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar -->
+       
+      <div class="col-md-2  sidebar p-3 pt-1 ">
+        <div class="row mb-5">
+        <div class="text-center col-3 ">
+          <div class="profile-img">
+            <img src="C:\Users\Ishita\Desktop\images.jpeg" width="45px " height="45px">
+          </div>
+          </div>
+           <div class="text-center d-flex col-9 mt-3 align-items-center">
+          <p class="diplay-2">Welcome, PURAV</h5>
+          </div>
+        
+        </div>
+        <div class="accordion mt-4 p-1" id="menuAccordion">
+          <div class="accordion-item bg-transparent border-0 ">
+            <h2 class="accordion-header ">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                Dashboard
+              </button>
+            </h2>
+            <div id="mainMenu" class="accordion-collapse collapse ">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Order</a></li>
+                  <li><a href="#">Customer</a></li>
+                  <li><a href="#">Report</a></li>
+                  <li><a href="#">Offer Settings</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu-1">
+                <i class="bi bi-box-seam mx-2"></i> Order
+              </button>
+            </h2>
+            <div id="supportMenu-1" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu">
+                <i class="bi bi-box mx-2"></i> Product
+              </button>
+            </h2>
+            <div id="supportMenu" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu2">
+                <i class="bi bi-people mx-2"></i> Customer
+              </button>
+            </h2>
+            <div id="supportMenu2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu3">
+                <i class="bi bi-cash-stack mx-2"></i> Finance
+              </button>
+            </h2>
+            <div id="supportMenu3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu4">
+                <i class="bi bi-tags mx-2"></i>   Category
+              </button>
+            </h2>
+            <div id="supportMenu4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu5">
+                <i class="bi bi-tags mx-2"></i>   Report
+              </button>
+            </h2>
+            <div id="supportMenu5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+      <!-- Main Content -->
+       
+      <div class="col-md-10 container-fluid p-3 pt-1  ">
+        
+         <nav class="navbar navbar-expand-md  bg-light shadow sticky-top  mb-4">
+     <a class="navbar-brand" href="#">
+   <img class="Logo" src="C:\Users\Ishita\Desktop\Sem-3\Project\dist\Admin-side\img\Stylesurfer-removebg-preview.png" width="200px" height="75px">
+
+   </a>
+ <!-- Inside your navbar -->
+<form class="search-wrapper mx-auto" style="width: 40%;">
+  <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+  <i class="bi bi-search"></i>
+</form>
+
+
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bell-fill"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gear-fill"></i></a></li>
+     
+    </ul>
+   </nav>
+
+
+<div class="container-fluid p-4">
+  
+  <!-- Top Stats -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-3 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Total Customers</p>
+        <h4>21,978</h4>
+        <small class="text-success">+15% from last month</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Active Customers</p>
+        <h4>10,369</h4>
+        <small class="text-danger">-9% from last month</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Profit Total</p>
+        <h4>$64,981.97</h4>
+        <small class="text-success">+7.2% from last month</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Expense Total</p>
+        <h4>$18,158.21</h4>
+        <small class="text-danger">-2% from last month</small>
+      </div>
+    </div>
+  </div>
+
+    
+  
+  <!-- Sales Overview + Schedule -->
+  <div class="row g-3 mb-4">
+    <!-- Sales Chart -->
+    <div class="col-lg-8">
+      <div class="card shadow p-3 h-100">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h6 class="mb-0">Sales Overview</h6>
+          <select class="form-select form-select-sm" style="width: auto;">
+            <option>Month</option>
+            <option>Week</option>
+            <option>Year</option>
+          </select>
+        </div>
+        <canvas id="salesChart" height="100">
+            <img src="">
+        </canvas>
+      </div>
+    </div>
+
+
+    <!-- Calendar + Schedule -->
+    <div class="col-lg-4">
+      <div class="card shadow p-3 h-100">
+        <h6>January 2023</h6>
+        <table class="table table-bordered text-center small">
+          <tr>
+            <td>8</td><td>9</td><td>10</td><td class="bg-success text-white">11</td><td>12</td><td>13</td><td>14</td>
+          </tr>
+        </table>
+
+        <h6 class="mt-3">Upcoming Schedule</h6>
+        <ul class="list-group list-group-flush small">
+          <li class="list-group-item">
+            <input type="checkbox" checked> Business Analytics Press <br>
+            <small class="text-muted">Wed, 11 Jan - 9:30 AM</small>
+          </li>
+          <li class="list-group-item">
+            <input type="checkbox"> Business Sprint <br>
+            <small class="text-muted">Wed, 11 Jan - 10:35 AM</small>
+          </li>
+          <li class="list-group-item">
+            <input type="checkbox"> Customer Review Meeting <br>
+            <small class="text-muted">Wed, 11 Jan - 1:15 PM</small>
+          </li>
+          <li class="list-group-item">
+            <input type="checkbox"> Daily Office Meeting <br>
+            <small class="text-muted">Wed, 11 Jan - 2:45 AM</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   <div class="row g-3">
+    <div class="col-md-12 ">
+      <div class="card shadow p-4 h-100">
+        <h6>Upcoming Schedule</h6>
+        <p>Desktop Users: <strong>31.12%</strong></p>
+        <div class="progress mb-2">
+          <div class="progress-bar bg-success" style="width: 31.12%"></div>
+        </div>
+        <p>Mobile Users: <strong>62.88%</strong></p>
+        <div class="progress">
+          <div class="progress-bar bg-primary" style="width: 62.88%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page-content-wrapper" class="flex-grow-1">
+           
+            <div class="container-fluid p-4 mt-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="mb-0">Customers</h3>
+                    <button type="button" class="btn btn-outline-dark">
+                        <i class="bi bi-plus-circle me-2"></i> Add New Customer
+                    </button>
+                </div>
+                
+                <ul class="nav nav-tabs border-0 mb-3" id="customerTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active text-black" id="all-tab" data-bs-toggle="tab" data-bs-target="#allCustomers" type="button" role="tab" aria-controls="allCustomers" aria-selected="true">All</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-black" id="active-tab" data-bs-toggle="tab" data-bs-target="#activeCustomers" type="button" role="tab" aria-controls="activeCustomers" aria-selected="false">Active</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-black" id="banned-tab" data-bs-toggle="tab" data-bs-target="#bannedCustomers" type="button" role="tab" aria-controls="bannedCustomers" aria-selected="false">Banned</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="customerTabsContent">
+                    <div class="tab-pane fade show active" id="allCustomers" role="tabpanel" aria-labelledby="all-tab">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="input-group" style="max-width: 600px;">
+                                <input type="text" class="form-control" placeholder="Search by name, email or phone...">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">View</span>
+                                <select class="form-select" style="width: auto;">
+                                    <option selected>24</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped align-middle p-3 mb-0  table-hover">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Phone</th>
+                                                <th scope="col">Total Orders</th>
+                                                <th scope="col">Registration Date</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" class="form-check-input"></td>
+                                                <td>John Doe</td>
+                                                <td>john.doe@example.com</td>
+                                                <td>+1 234 567 8900</td>
+                                                <td>12</td>
+                                                <td>2024-05-15</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="form-check-input"></td>
+                                                <td>Jane Smith</td>
+                                                <td>jane.s@example.com</td>
+                                                <td>+1 987 654 3210</td>
+                                                <td>5</td>
+                                                <td>2024-04-20</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="form-check-input"></td>
+                                                <td>Mike Johnson</td>
+                                                <td>mike.j@example.com</td>
+                                                <td>+1 555 123 4567</td>
+                                                <td>0</td>
+                                                <td>2024-05-25</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                                    <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-check"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="activeCustomers" role="tabpanel" aria-labelledby="active-tab">
+                       <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="input-group" style="max-width: 600px;">
+            <input type="text" class="form-control" placeholder="Search by name, email or phone...">
+             <span class="input-group-text"><i class="bi bi-search"></i></span>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="me-2">View</span>
+            <select class="form-select" style="width: auto;">
+                <option selected>24</option>
+                <option>50</option>
+                <option>100</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="card shadow">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Total Orders</th>
+                            <th scope="col">Registration Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td>+1 234 567 8900</td>
+                            <td>12</td>
+                            <td>2024-05-15</td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>Jane Smith</td>
+                            <td>jane.s@example.com</td>
+                            <td>+1 987 654 3210</td>
+                            <td>5</td>
+                            <td>2024-04-20</td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>Laura Williams</td>
+                            <td>laura.w@example.com</td>
+                            <td>+1 123 987 6543</td>
+                            <td>8</td>
+                            <td>2024-03-10</td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="tab-pane fade" id="bannedCustomers" role="tabpanel" aria-labelledby="banned-tab">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="input-group" style="max-width: 600px;">
+            <input type="text" class="form-control" placeholder="Search by name, email or phone...">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="me-2">View</span>
+            <select class="form-select" style="width: auto;">
+                <option selected>24</option>
+                <option>50</option>
+                <option>100</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="card shadow">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Total Orders</th>
+                            <th scope="col">Registration Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td>+1 234 567 8900</td>
+                            <td>12</td>
+                            <td>2024-05-15</td>
+                            <td><span class="badge bg-secondary">Banned</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>Jane Smith</td>
+                            <td>jane.s@example.com</td>
+                            <td>+1 987 654 3210</td>
+                            <td>5</td>
+                            <td>2024-04-20</td>
+                            <td><span class="badge bg-secondary">Banned</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input"></td>
+                            <td>Laura Williams</td>
+                            <td>laura.w@example.com</td>
+                            <td>+1 123 987 6543</td>
+                            <td>8</td>
+                            <td>2024-03-10</td>
+                            <td><span class="badge bg-secondary">Banned</span></td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-dark me-1"><i class="bi bi-eye"></i></a>
+                                <a href="#" class="btn btn-sm btn-outline-dark"><i class="bi bi-person-slash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+              
+</div>
+
+ </div>     
+    </div>
+  </div>
+
+  
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

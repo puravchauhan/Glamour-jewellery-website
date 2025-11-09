@@ -1,0 +1,55 @@
+ body{
+    background-color: #F1E9DC;
+ }
+ 
+ 
+ .signup-container {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .slider-section {
+      background-color: white;
+      height: 105vh;  
+      
+    }
+    .form-section {
+      padding: 50px;
+      background-color: white;
+      
+    }
+    .form-section .form-control {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #000;
+      margin-bottom: 20px;
+      box-shadow: none;
+    }
+    .signup-btn {
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 10px;
+      width: 100%;
+      background: none;
+    }
+    .login-link {
+      font-size: 14px;
+      margin-top: 10px;
+      display: block;
+    }
+    .img1 {
+  width: 100%;
+  height: 100%;
+  min-height: 120vh;       
+  object-fit: cover;       
+}
+
+#usr,#eml,#pas,#cpas1,#nm,#City,#Addr{
+  color: red;
+  margin: auto;
+}
+  

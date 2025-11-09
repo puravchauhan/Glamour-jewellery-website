@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+     <style>
+      body{
+        background-color: white;
+      }
+        .navbar{
+            height: 65px;
+            padding: 25px 5px 25px 5px;
+            margin-bottom: 27px;
+            
+        }
+    .accordion-button::after {
+  filter: brightness(0) invert(1); /* makes the arrow white */
+}
+
+      .profile-img img {
+      border-radius: 30px;
+      margin: 15px auto;
+    }
+        
+    /* Sidebar */
+    .sidebar {
+      background-color: #101010; 
+      min-height: 292vh;
+      color: #ecf0f1;
+      padding-top: 10px;
+      
+    }
+    .sidebar .accordion-button {
+      background-color: #1b1c1c;
+      color: #ced4d5;
+      border: none;
+      padding: 12px 16px;
+    }
+    .sidebar .accordion-button:not(.collapsed) {
+      background-color: #34495E;
+      color: #fff;
+      box-shadow: none;
+    }
+    .sidebar .accordion-body a {
+      display: block;
+     padding: 8px 5px;
+     color: #bdc3c7;
+     text-decoration: none;
+     border-radius: 2px;
+}
+  .sidebar .accordion-body a {
+  color: #f1f1f1; /* brighter text */
+}
+
+.sidebar .accordion-body a:hover {
+  background-color: #4f5049;
+  color: #fff;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-wrapper input {
+    padding-right: 40px; 
+  }
+
+  .search-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+  }
+input:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+    thead{
+        background-color: #101010;
+    }
+    
+
+
+.upload-area {
+    border: 2px dashed #dee2e6; 
+    border-radius: 0.25rem; 
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.upload-area:hover {
+    border-color: #444547;
+    background-color: #f8f9fa; 
+}
+
+.upload-area .upload-icon {
+    font-size: 3rem; 
+    color: #6c757d; 
+    margin-bottom: 0.5rem;
+}
+
+.upload-area p {
+    margin-bottom: 0.25rem;
+    color: #495057; 
+}
+
+.upload-area .form-text {
+    font-size: 0.875em;
+    color: #6c757d;
+}
+  .nav-item-bordered {
+    border: 1px solid #1d1e1e; /* A light gray border */
+    margin: 0 0.25rem; 
+}
+.nav-tabs .nav-link {
+    border-bottom: 1px solid #1d1e1e !important;
+}
+
+
+
+     </style>
+</head>
+<body>
+
+  
+
+ <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar -->
+       
+      <div class="col-md-2  sidebar p-3 pt-1 ">
+        <div class="row mb-5">
+        <div class="text-center col-3 ">
+          <div class="profile-img">
+            <img src="C:\Users\Ishita\Desktop\images.jpeg" width="45px " height="45px">
+          </div>
+          </div>
+           <div class="text-center d-flex col-9 mt-3 align-items-center">
+          <p class="diplay-2">Welcome, PURAV</h5>
+          </div>
+        
+        </div>
+        <div class="accordion mt-4 p-1" id="menuAccordion">
+          <div class="accordion-item bg-transparent border-0 ">
+            <h2 class="accordion-header ">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                Dashboard
+              </button>
+            </h2>
+            <div id="mainMenu" class="accordion-collapse collapse ">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Order</a></li>
+                  <li><a href="#">Customer</a></li>
+                  <li><a href="#">Report</a></li>
+                  <li><a href="#">Offer Settings</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu-1">
+                <i class="bi bi-box-seam mx-2"></i> Order
+              </button>
+            </h2>
+            <div id="supportMenu-1" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu">
+                <i class="bi bi-box mx-2"></i> Product
+              </button>
+            </h2>
+            <div id="supportMenu" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu2">
+                <i class="bi bi-people mx-2"></i> Customer
+              </button>
+            </h2>
+            <div id="supportMenu2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu3">
+                <i class="bi bi-cash-stack mx-2"></i> Finance
+              </button>
+            </h2>
+            <div id="supportMenu3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu4">
+                <i class="bi bi-tags mx-2"></i>   Category
+              </button>
+            </h2>
+            <div id="supportMenu4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#supportMenu5">
+                <i class="bi bi-tags mx-2"></i>   Report
+              </button>
+            </h2>
+            <div id="supportMenu5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="nav flex-column">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+      <!-- Main Content -->
+       
+      <div class="col-md-10 container-fluid p-4 pt-1  ">
+        
+         <nav class="navbar navbar-expand-md  bg-light shadow sticky-top  mb-4">
+     <a class="navbar-brand" href="#">
+   <img class="Logo" src="C:\Users\Ishita\Desktop\Sem-3\Project\dist\Stylesurfer-removebg-preview.png" width="200px" height="75px">
+
+   </a>
+ <!-- Inside your navbar -->
+<form class="search-wrapper mx-auto" style="width: 40%;">
+  <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+  <i class="bi bi-search"></i>
+</form>
+
+
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bell-fill"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-gear-fill"></i></a></li>
+     
+    </ul>
+   </nav>
+
+ 
+
+<div class="container-fluid p-1 mt-1">
+    <div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Finance Overview</h3>
+    <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addTransactionModal">
+      + Add Transaction
+    </button>
+  </div>
+  <!-- Top Stats -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-4 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Total Revenue</p>
+        <h4>$45,000</h4>
+       
+      </div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Total Expenses</p>
+        <h4>$20,000</h4>
+       
+      </div>
+    </div>
+    <div class="col-md-4 col-6">
+      <div class="card shadow p-3 h-100">
+        <p class="h6">Net Profit</p>
+        <h4>$79,000</h4>
+       
+      </div>
+    </div>
+  
+  </div>
+
+  
+
+ 
+
+ <h3 class="mb-4">Recent Transactions</h3>
+   <div class="card shadow">
+    
+                            <div class="card-body p-0">
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped align-middle p-3 mb-0  table-hover">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                 <th>#</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                              <td>1</td>
+            <td>08 Oct 2025</td>
+            <td>Order Payment </td>
+            <td><span class="badge bg-success">Credit</span></td>
+            <td>₹4,999</td>
+            <td><span class="badge bg-success">Completed</span></td>
+                                            </tr>
+                                            <tr>
+                                               <td>2</td>
+            <td>06 Oct 2025</td>
+            <td>Designer Commission</td>
+            <td><span class="badge bg-danger">Debit</span></td>
+            <td>₹2,500</td>
+            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                 <td>3</td>
+            <td>05 Oct 2025</td>
+            <td>Product Refund</td>
+            <td><span class="badge bg-danger">Debit</span></td>
+            <td>₹1,200</td>
+            <td><span class="badge bg-success">Completed</span></td>
+                                            </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+<!-- Add Transaction Modal -->
+<div class="modal fade" id="addTransactionModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Add New Transaction</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" placeholder="Transaction details">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Type</label>
+            <select class="form-select">
+              <option>Credit</option>
+              <option>Debit</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Amount</label>
+            <input type="number" class="form-control" placeholder="Enter amount">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option>Completed</option>
+              <option>Pending</option>
+              <option>Failed</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary">Save Transaction</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+<!-- Add Transaction Modal -->
+<div class="modal fade" id="addTransactionModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Add New Transaction</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" placeholder="Transaction details">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Type</label>
+            <select class="form-select">
+              <option>Credit</option>
+              <option>Debit</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Amount</label>
+            <input type="number" class="form-control" placeholder="Enter amount">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option>Completed</option>
+              <option>Pending</option>
+              <option>Failed</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary">Save Transaction</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+   

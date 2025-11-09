@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-dis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="couple.css">
+     <link rel="stylesheet" type="text/css" href="C:\Users\Ishita\Desktop\Sem-3\Project\dist\style.css">
+    <style>
+     
+ .signup-container {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .slider-section {
+      background-color: white;
+      height: 105vh;  
+      
+    }
+    .form-section {
+      padding: 120px;
+      background-color: white;
+      
+    }
+    .form-section .form-control {
+      border-radius: 0;
+      border: none;
+      border: 1px solid #000;
+      margin-bottom: 20px;
+      box-shadow: none;
+    }
+    .signup-btn {
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 10px;
+      width: 100%;
+      background: none;
+    }
+    .login-link {
+      font-size: 14px;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .mega-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: #fff;
+      padding: 20px;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .nav-link{
+        color: #6A5F55;
+    }
+   
+    .nav-item.mega-hover:hover .mega-menu {
+      display: block;
+    }
+    .mega-menu .col {
+      padding: 10px;
+    }
+    .mega-menu a {
+      display: block;
+      padding: 5px 0;
+      color: #151515;
+      text-decoration: none;
+    }
+    .mega-menu a:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    .navbar{
+        background-color:  #D9C8B2; /*#DEBFAD*/
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
+    .Logo{
+        width: 220px;
+        height: 75px;
+    }
+
+    .sub-navbar {
+      background-color: #F1E9DC;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 99px; /* height of main navbar */
+      z-index: 1019;
+      
+    }
+    .sub-navbar .nav-link {
+      font-weight: 500;
+      color: #6A5F55 !important;
+      padding: 2px;
+    }
+   
+    
+
+ 
+
+.nav-bar {
+        background-color: #F1E9DC; /* beige background */
+        border-bottom: 1px solid #d1c4b0; /* subtle border */
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        position: sticky;
+       top: 99px; /* height of main navbar */
+       z-index: 1019;
+    }
+
+    /* Navigation links */
+    .nav-bar a {
+        text-decoration: none;
+        color: #6A5F55;
+        margin: 0 10px;
+           font-weight: 500;
+          color: #6A5F55;
+          padding: 2px;
+    }
+
+     .footer {
+      border: 1px solid #ccc;
+      padding: 40px 20px;
+      font-size: 15px;
+      background-color: #F1E9DC;
+    }
+    .footer h6 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .footer a {
+      display: block;
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: color 0.3s;
+    }
+    .footer a:hover {
+      color: #555;
+    }
+    .footer .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      color: #000;
+    }
+    .footer .social-icons a:hover {
+      color: #555;
+    }
+
+     @media (max-width: 845px) {
+  
+.nav-bar {
+       display: none;
+    }
+
+    /* Navigation links */
+    .nav-bar a {
+       display: none;
+    }
+}
+
+ .container {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 20px;
+              flex-direction: row;
+              padding: 20px;
+   
+          }
+
+          .container-1 {
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+ 
+          }
+  
+          .container-1 img {
+              width: 127px; /* Set image size */
+              cursor: pointer;
+          }
+  
+          .container-2 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .container-3 {
+              position: relative; 
+              overflow: hidden; /* Hide overflow to prevent the image from extending outside the container */
+            
+          }
+  
+          #mainProductImage {
+              transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+          }
+  
+          .container-3 img {
+              width: 400px; /* Set main image size */
+          }
+          .price-section {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ff6600;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+      .selected-image {
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+  
+      .original-price {
+        font-size: 18px;
+        color: #888;
+        text-decoration: line-through;
+        margin-right: 10px;
+      }
+  
+      .rental-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #110808;
+      }
+  
+      .brand {
+        color: #888;
+        font-size: 14px;
+      }
+  
+      .button-group .btn {
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        width: 100%;
+      }
+  
+      .btn-dark {
+        background-color: #333;
+        color: white;
+      }
+  
+      .btn-warning2 {
+        background-color: #110808;
+        color: white;
+        border: none;
+      }
+  
+      .btn-warning2:hover , .btn-warning2:active{
+        background-color: #110808;
+        color: white;
+        border: none;
+      }
+  
+      .modal-body {
+        font-size: 16px;
+        color: #333;
+      }
+  
+      .detailed-description {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin-top: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      .related-products h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+  
+      .related-products .card {
+        border: none;
+        text-align: center;
+        border-radius: 8px;
+      }
+  
+      .related-products .card img {
+        border-radius: 8px;
+      }
+  
+      .product-details {
+       width: 450px;
+       padding: 15px;
+       
+      }
+  
+      .product-details h1 {
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .product-details p {
+        font-size: 18px;
+      }
+  
+      .product-details .price {
+        font-size: 10px;
+        font-weight: bold;
+      }
+  
+      .product-details .sku {
+        font-size: 12px;
+        color: gray;
+        margin-top: 20px;
+      }
+  
+      .product-details .sizes {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+  
+      .product-details .sizes button {
+        border: 1px solid #000;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid black ;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+  
+      .product-details .sizes button.active {
+        background-color: #000;
+        color: #fff;
+      }
+  
+      .product-details .delivery {
+        margin: 10px 0;
+      }
+  
+      .product-details .actions {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+  
+      .product-details .actions button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+  
+      .product-details .actions .buy-now {
+        background-color: #000;
+        color: #fff;
+      }
+  
+      .product-details .actions .add-to-cart {
+        background-color: #fff;
+        border: 1px solid #000;
+        font-size: 15px;
+      }
+
+  
+
+  .product-details .actions .date-select {
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 15px;
+    width: 50%;
+  }
+      
+  
+      .product-details .additional-info button {
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 16px;
+       
+      }
+    
+  
+      
+  
+      /* Styling the dropdown */
+      .rentalDuration {
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+      }
+  
+      /* Accordion styling */
+      .additional-info button i {
+        float: right;
+      }
+  
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      @media (max-width: 468px) {
+        .size-chart-table {
+            font-size: 12px; 
+        }
+    
+        .size-chart-table th, .size-chart-table td {
+            padding: 3px; 
+        }
+    
+        .size-chart-container {
+            margin: 5px; 
+        }
+        .modal-body {
+        padding: 2px !important;
+         
+      }
+    }
+
+  .size-chart-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+  }
+  
+  
+  .size-chart-table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ccc;
+  }
+  
+  .size-chart-table th, .size-chart-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+  }
+  
+  .size-chart-table th {
+      background-color: #f4f4f4;
+  }
+  
+  .size-chart-table td {
+      background-color: #ffffff;
+  }
+  .product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .container-1 {
+          display: none; 
+        }
+  
+        .product-details {
+          padding: 10px;
+          margin-top: 10px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+  
+        .container-3 img {
+          width: 100%; 
+        }
+       
+        
+      }
+
+      .product-details h1 {
+        font-size: 21px;
+        font-weight: bold;
+      }
+  
+      .product-details .price {
+        font-size: 10px;
+        font-weight: bold;
+      }
+  
+      .product-details .sku {
+        font-size: 12px;
+        color: gray;
+        margin-top: 20px;
+      }
+  
+      .product-details .sizes button {
+        width: 40px;
+        height: 40px;
+      }
+      .bi-plus{
+       font-size: 20px;
+       font-weight: bolder;
+       margin-right: 2px;
+      }
+      .iconss{
+        margin-top: 26px;
+      }
+      .iconss a {
+        text-decoration: none;
+        color: #000;
+        margin-left: 7px;
+        font-size: 16px;
+      }
+  
+  
+      .recommend {
+      padding: 5%;
+      padding-bottom: 0%;
+      
+  }
+  .recommend_slider{
+      padding: 45px 0;
+      margin-bottom: 1%;
+  }
+  .rent-by-recommend{
+      font-size: xx-large;
+      text-align: center;
+      color: black;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      letter-spacing : .1em;
+     
+  }
+  
+ .Mobile button {
+      display: none;
+    }
+
+    @media (max-width: 845px) {
+      .Mobile button {
+        display: inline-block;
+      }
+    }
+
+    </style>
+</head>
+<body>
+ 
+    
+   <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+
+    <!-- Left Side -->
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-3 ">
+      <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+      <li class="nav-item mega-hover position-static">
+          <a class="nav-link" href="woman.html">Women </a>
+          
+        </li>
+
+      <li class="nav-item"><a class="nav-link" href="Couple.html">Couple</a></li>
+    </ul>
+
+    <a class="navbar-brand" href="#">
+   <img class="Logo" src="Stylesurfer-removebg-preview.png">
+
+   </a>
+
+   
+
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i></a></li>
+      
+    </ul>
+    
+    </div>
+  </div>
+  
+</nav>
+
+<div class="nav-bar  ">
+    <a href="#">Rings</a>
+    <a href="#">Earrings</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Diamond Jewellery</a>
+    <a href="#">All Jewellery</a>
+    <a href="#">Occasions & Gifting</a>
+</div>
+
+
+<!-- Mobile Offcanvas Toggle -->
+<div class="md:hidden flex justify-between items-center  Mobile ">
+ 
+  <button class="btn " data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+    ☰
+  </button>
+
+</div>
+
+<!-- Offcanvas Menu for Mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header bg-pink-100">
+    
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body bg-pink-50">
+    <ul class="space-y-4">
+       <li><a href="#" class="block text-lg no-underline">Rings</a></li>
+      <li><a href="productpage.html" class="block text-lg no-underline">Earrings</a></li>
+      <li><a href="#" class="block text-lg no-underline">Men</a></li>
+      <li><a href="#" class="block text-lg no-underline">Women</a></li>
+      <li><a href="#" class="block text-lg no-underline">Diamond Jewellery</a></li>
+      <li><a href="#" class="block text-lg no-underline">All Jewellery</a></li>
+      <li><a href="#" class="block text-lg no-underline">Occasions & Gifting</a></li>
+      <a href="Contact.html">Contact</a>
+    </ul>
+  </div>
+</div>
+
+
+
+
+ <div class="container">
+          <!-- Vertical Image Thumbnails in Container-1 -->
+          <div class="container-1">
+            <img src="https://rubans.in/cdn/shop/files/RE10EL408694_1.jpg?v=1762460959&width=120" alt="Thumbnail 1" >
+            <img src="https://rubans.in/cdn/shop/files/RE10EL408694_3.jpg?v=1762460959&width=120" alt="Thumbnail 2" >
+            <img src="https://rubans.in/cdn/shop/files/rubans-22k-gold-plated-pachi-kundan-chandbali-earrings-with-rosy-pink-drops-white-and-green-pearl-detailing-earrings-1186073661.jpg?v=1755711767&width=120" alt="Thumbnail 3" >
+       
+          </div>
+  
+          <!-- Main Image in Container-2 -->
+          <div class="container-2  ">
+              <div class="container-3 ">
+               
+                   
+                    <div id="carouselExampleFade" class="carousel slide " data-bs-ride="carousel" >
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"  aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img id="mainProductImage" src="https://rubans.in/cdn/shop/files/rubans-22k-gold-plated-pachi-kundan-chandbali-earrings-with-rosy-pink-drops-white-and-green-pearl-detailing-earrings-1186073661.jpg?v=1755711767&width=900" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img id="mainProductImage" src="https://rubans.in/cdn/shop/files/RE10EL408694_3.jpg?v=1762460959&width=1080" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img id="mainProductImage" src="https://rubans.in/cdn/shop/files/RE10EL408694_3.jpg?v=1762460959&width=1080" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      
+                      
+                   
+              </div>
+             
+          </div>
+          <div class="container-2">
+            <div class="container-3">
+              <div class="product-details">
+                <h1>Gold-Plated Multilayer Pearl Beaded Necklace Set with Matching Earrings</h1>
+              
+                <div class="price-section">
+                  <span class="original-price">₹39,500.00</span>
+                  <span class="rental-price">Buy: ₹5,000.00</span>
+                </div>
+                 <br>
+                 <br>
+                <input type="checkbox">Buying as a gift
+               <br>
+               <BR>
+                <br>
+                <br>
+                <br>
+                 <div id="message"></div>
+                <div class="actions">
+                  
+                  <button class="add-to-cart">Add to Cart</button>
+                  <button class="buy-now">Buy Now</button>
+                </div>
+
+               
+             
+          
+               
+                <div class="additional-info">
+                  <button onclick="toggleAccordion(this)"> Product details  <i class="bi bi-plus"></i></button>
+                  <div class="accordion-content">Intricately embroidered kurta set perfect for festive occasions.</div>
+                  
+                </div>
+                 <div class="additional-info">
+                  <button onclick="toggleAccordion(this)"> Delivery & Returns  <i class="bi bi-plus"></i></button>
+                  <div class="accordion-content">Intricately embroidered kurta set perfect for festive occasions.</div>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+     
+                
+      
+      
+    </div>
+  
+    
+  
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <footer class="footer container-fluid d-none d-md-block">
+    <div class="row text-center text-md-start ms-5">
+
+      <!-- Categories -->
+      <div class="col-6 col-sm-3 mb-4">
+        <h6>Categories</h6>
+        <a href="#">Earrings</a>
+        <a href="#">Bangles</a>
+        <a href="#">Rings</a>
+        <a href="#">Pendants</a>
+        <a href="#">Necklace</a>
+      </div>
+
+      <!-- Info -->
+      <div class="col-6 col-sm-3 mb-4">
+        <h6>Info</h6>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Celebrity Look</a>
+      </div>
+
+      <!-- Customer Care -->
+      <div class="col-12 col-sm-3 mb-4">
+        <h6>For Customer Care</h6>
+        <p class="mb-1">customercare@glamourjewellery.com</p>
+        <p class="mb-0">+91 9106446236</p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-12 col-sm-3 mb-4">
+        <h6>Follow Us</h6>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Mobile Accordion -->
+  <div class="accordion d-block d-md-none" id="footerAccordion">
+
+    <!-- Categories -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCat">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCat">
+          Categories
+        </button>
+      </h2>
+      <div id="collapseCat" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#" class="d-block">Earrings</a>
+          <a href="#" class="d-block">Bangles</a>
+          <a href="#" class="d-block">Rings</a>
+          <a href="#" class="d-block">Pendants</a>
+          <a href="#" class="d-block">Necklace</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingInfo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo">
+          Info
+        </button>
+      </h2>
+      <div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#" class="d-block">About Us</a>
+          <a href="#" class="d-block">Contact Us</a>
+          <a href="#" class="d-block">Celebrity Look</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Care -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCare">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCare">
+          For Customer Care
+        </button>
+      </h2>
+      <div id="collapseCare" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <p class="mb-1">customercare@glamourjewellery.com</p>
+          <p class="mb-0">+91 9106446236</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFollow">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFollow">
+          Follow Us
+        </button>
+      </h2>
+      <div id="collapseFollow" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body">
+          <a href="#"><i class="bi bi-facebook me-2"></i></a>
+          <a href="#"><i class="bi bi-pinterest me-2"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+
+
+  
+</body>
+</html>

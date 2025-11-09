@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="C:\Users\Ishita\Desktop\Sem-3\Project\dist\style.css">
+    
+     <style>
+         body{
+    background-color: #F1E9DC;
+ }
+ 
+ 
+ .signup-container {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .slider-section {
+      background-color: white;
+      height: 105vh;  
+      
+    }
+    .form-section {
+      padding: 50px;
+      background-color: white;
+      
+    }
+    .form-section .form-control {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #000;
+      margin-bottom: 20px;
+      box-shadow: none;
+    }
+    .signup-btn {
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 10px;
+      width: 100%;
+      background: none;
+    }
+    .login-link {
+      font-size: 14px;
+      margin-top: 10px;
+      display: block;
+    }
+    .img1 {
+  width: 100%;
+  height: 100%;
+  min-height: 120vh;       
+  object-fit: cover;       
+}
+
+#eml,#pas{
+  color: red;
+}
+  
+     </style>
+
+</head>
+<body >
+  
+<div class="container signup-container">
+  <div class="row w-100 shadow align-items-center bg-white">
+
+    <!-- Left: Image Slider -->
+    <div class="col-md-6 slider-section p-0  d-md-block">
+      <div id="imageCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="https://i.pinimg.com/736x/41/c1/32/41c1320cb17042fe2854e60def99574b.jpg" class="d-block w-100 h-100 img1" >
+          </div>
+          <div class="carousel-item h-100">
+            <img src="https://i.pinimg.com/736x/ff/71/52/ff71522045a4958fceb757328c035ea7.jpg" class="d-block w-100 h-100 img1" >
+          </div>
+          <div class="carousel-item h-100">
+            <img src="https://i.pinimg.com/736x/ec/30/f9/ec30f942e0d9926fadf3dc86ff7f8716.jpg" class="d-block w-100 h-100 img1" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Signup Form -->
+    <div class="col-md-6 form-section">
+      <p class="text-center mb-4 h3">Login</p>
+
+      <form id="myform" method="POST" action="#"
+onsubmit="return validate()">
+
+        <input type="email" class="form-control" placeholder="Email" name="email" id="emails">
+        <span id="eml"></span>
+       
+        <input type="password" class="form-control" placeholder="Password" name="pass" id="pasa">
+         <span id="pas"></span>
+
+              <p class=" login-link">Forget Password </p>
+
+       
+
+        <button type="submit" class="signup-btn mt-3" value="submit" id="btn" name="submit">Login</button>
+      </form>
+
+      <p class="text-center login-link">Dont have an account ?  <a href="#">Create Account</a></p>
+    </div>
+
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</body>
+</html>
